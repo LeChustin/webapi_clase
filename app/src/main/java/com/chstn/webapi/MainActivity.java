@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void LeerWS(){
 
-        String url="https://apifunciones.azurewebsites.net/Funciones/Potencia?n1="+et_num1.getText()+"&n2="+et_num2.getText();
+        String url="https://ejemplo2apimovil20240128220859.azurewebsites.net/api/Operaciones?a="+et_num1.getText()+"&b="+et_num2.getText();
         OkHttpClient client = new OkHttpClient();
 
         Request get = new Request.Builder()
@@ -59,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         client.newCall(get).enqueue(new Callback() {
-
-
-
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
@@ -74,21 +71,19 @@ public class MainActivity extends AppCompatActivity {
                     ResponseBody responseBody = response.body();
                     if (!response.isSuccessful()) {
                         throw new IOException("Unexpected code " + response);
-                    }
-                    a=responseBody.string();
+                    }else{
+                        a=responseBody.string();
 
 
-                    MainActivity.this.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            et_resul.setText(a);
-                        }
-                    });
+                        MainActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                et_resul.setText(a);
+                            }
+                        });}
 
 
-                    Toast.makeText(MainActivity.this,"El resultado es:"+a, Toast.LENGTH_LONG).show();
 
-                    Log.i("data", responseBody.string());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -98,5 +93,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 }
