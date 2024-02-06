@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".jsonnn">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp">
+
+                <!-- Encabezados de la tabla -->
+                <TableRow android:layout_height="62dp">
+
+                    <TextView
+                        android:id="@+id/campo1"
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Materia" />
+
+                    <TextView
+                        android:id="@+id/campo2"
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Nivel" />
+
+                    <TextView
+                        android:id="@+id/campo3"
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Estudiante" />
+
+                    <TextView
+                        android:id="@+id/campo4"
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="N1" />
+
+                    <TextView
+                        android:id="@+id/campo5"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="N2" />
+
+                    <TextView
+                        android:id="@+id/campo6"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="N3" />
+
+                    <TextView
+                        android:id="@+id/campo7"
+                        android:layout_width="51dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Prom" />
+
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
